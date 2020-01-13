@@ -45,6 +45,10 @@ import java.util.Locale;
 
 import static com.example.showlocation.Constants.createDurationCounter;
 
+/*
+Main activity for texting application
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     //Sending the message variables
