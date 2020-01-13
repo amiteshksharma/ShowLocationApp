@@ -161,9 +161,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void createLocationRequest() {
         locationRequest = new LocationRequest();
-        locationRequest.setInterval(1000 * 10);
-        locationRequest.setFastestInterval(1000 * 5);
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        locationRequest.setInterval(1000 * 30);
+        locationRequest.setFastestInterval(1000 * 30);
+        locationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
     }
 
     private void startOrEndButton() {
@@ -246,6 +246,7 @@ public class MainActivity extends AppCompatActivity {
         numberText.setText("");
         timeSpan.setText("");
         listNumbers.setText("");
+        count = 0;
     }
 
     private void messageText(String str) {
@@ -285,8 +286,7 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode) {
             case SMS_REQUEST_CODE: {
                 // If request is cancelled, the result arrays are empty.
-                if (requestPermissions(Manifest.permission.SEND_SMS) && requestPermissions(Manifest.permission.ACCESS_FINE_LOCATION)) {
-                }
+                if (requestPermissions(Manifest.permission.SEND_SMS) && requestPermissions(Manifest.permission.ACCESS_FINE_LOCATION)) {}
                 break;
             }
         }
